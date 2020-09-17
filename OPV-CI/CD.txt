@@ -1,0 +1,40 @@
+Jenkins:
+
+
+Plugins:
+Sonarscanner
+Maven
+Artifactory
+Azure App Service Plugin
+
+Global tool configuration:
+Maven Home
+Artifactory servers
+Sonarscanner servers and its url
+
+Linux Node:
+
+create user
+generate sshkey
+check authorized keys created
+copy id_rsa and paste it in jenkins manage nodes credentai
+
+Gitblit
+Configured hooks in gitblit 
+
+Pom
+jacoco-maven-plugin
+maven-surefire-plugin
+
+SonarQube
+sonar.projectKey=com.lv.rs:OPVMemberAccount
+sonar.sources=memberaccountservices/src/main
+sonar.java.binaries=memberaccountservices/target/classes
+sonar.junit.reportPaths=memberaccountservices/target/surefire-reports
+sonar.tests=memberaccountservices/src/test
+sonar.coverage.jacoco.xmlReportPaths=memberaccountservices/target/site/jacoco/jacoco.xml
+SONAR_SCANNER_OPTS='-Djavax.net.ssl.trustStore=/opt/jenkins/home/truststore'
+sonar.projectVersion=1.0
+sonar.jacoco.reportPaths=memberaccountservices/target/jacoco.exec
+
+•	Configured the Quality gate in SonarQube to achieve code coverage and code standards
